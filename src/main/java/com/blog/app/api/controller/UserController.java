@@ -16,8 +16,8 @@ public class UserController {
     
     @Autowired
     UserService userService;
-
-    @PostMapping("/create-user")
+    
+    @PostMapping("/")
     public ResponseEntity<ApiResponse> createUser(@RequestBody UserDTO userDTO)
     {
     	UserDTO createdUser = userService.createUser(userDTO);
@@ -26,8 +26,6 @@ public class UserController {
         response.setData(createdUser);
         response.setStatus(true);
         response.setMessage("User Created Successfully!");
-        response.setStatus_code(HttpStatus.CREATED);
-//        response.setStatus_code(HttpStatusCode.);
         
         return new ResponseEntity<>(response,HttpStatus.CREATED);
     }

@@ -7,5 +7,7 @@ import com.blog.app.api.entity.User;
 
 @Repository
 public interface UserRepo extends JpaRepository<User,Integer> {
-    
+  
+	User findByEmail(String email);
+	User findByUserName(String userName);
 }

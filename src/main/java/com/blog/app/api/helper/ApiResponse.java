@@ -14,7 +14,14 @@ public class ApiResponse {
 boolean status;
 String message;
 Object data;
-HttpStatus http_status;
-HttpStatusCode status_code;
-String error_msg;
 }
+
+//@NoArgsConstructor
+//@Getter
+//@Setter
+//class FaildApiResponse{
+//	boolean status;
+//	String error_msg;
+//	HttpStatus http_status;
+//	HttpStatusCode status_code;
+//}

@@ -18,6 +18,8 @@ public class UserServiceImpl implements UserService  {
 
     @Override
     public UserDTO createUser(UserDTO userDTO) {
+    	User checkUserPresent= userRepo.findByEmail(userDTO.getEmail());
+    	
     	User user=userRepo.save(userDtoToUser(userDTO));
         return userToUserDto(user);
     }
